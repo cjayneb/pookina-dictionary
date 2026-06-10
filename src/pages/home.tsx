@@ -50,7 +50,7 @@ export default function Home() {
       <p>
         Looong time ago ({time.years} years, {time.months} months, {time.days} days,{' '}
         {time.hours} hours, {time.minutes} minutes, and {time.seconds} seconds), 
-        two little pookenese buddies started frolicking around
+        two little pookenese buddies started frolicking around. blablablablablabla
       </p>
     </>
   );

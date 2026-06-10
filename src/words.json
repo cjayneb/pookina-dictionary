@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "word": "Lapoona",
+        "pronounciation": "",
+        "type": "Proper noun",
+        "definition": "",
+        "examples": [
+            "Hello Lapoona :)"
+        ],
+        "synonyms": [
+            "Lapoonie"
+        ],
+        "etymology": ""
+    },
+    {
+        "id": 1,
+        "word": "Gougi",
+        "pronounciation": "",
+        "type": "Verb",
+        "definition": "",
+        "examples": [
+            "DON'T GOUGI ME"
+        ],
+        "synonyms": [
+            "To tickle"
+        ],
+        "etymology": ""
+    }
+]

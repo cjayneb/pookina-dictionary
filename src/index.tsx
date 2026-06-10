@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layout.js';
 import Home from './pages/home.js';
 import Health from './pages/health.js';
+import Words from './pages/words.js';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="words" element={<Words />} />
           <Route path="health" element={<Health />} />
         </Route>
       </Routes>
