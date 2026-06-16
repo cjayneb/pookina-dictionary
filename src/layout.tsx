@@ -19,7 +19,7 @@ export default function Layout() {
         <details>
           <summary><Link to="/words">Words</Link></summary>
           <ul>
-            {words.map((word) => (
+            {words.sort((a, b) => a.word.localeCompare(b.word)).map((word) => (
               <li><Link to={"/words#"+word.id}>{word.word}</Link></li>
             ))}
           </ul>

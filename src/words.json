@@ -1,30 +1,70 @@
 [
     {
         "id": 0,
-        "word": "Lapoona",
-        "pronounciation": "",
-        "type": "Proper noun",
-        "definition": "",
+        "word": "Blehhhh",
+        "pronounciation": "blɛɛɛɛ",
+        "type": "Noise",
+        "definition": "Exclamation to express happiness, agreement or freakiness😏.",
         "examples": [
-            "Hello Lapoona :)"
+            "Pookie #1: Do you want to hang out tonight?, Pookie #2: Blehhhhhh😛"
         ],
         "synonyms": [
-            "Lapoonie"
+            "Yessir!",
+            "I agree with this posposition",
+            "I do enjoy what you have just said",
+            "What I just did was so crazy freaky"
         ],
-        "etymology": ""
+        "etymology": "Unknown. Possible link to Megan Thee Stallion..."
     },
     {
-        "id": 1,
+        "id": 2,
         "word": "Gougi",
-        "pronounciation": "",
+        "pronounciation": "ɡʊɡi",
         "type": "Verb",
-        "definition": "",
+        "definition": "To gougi is to tickle someone without their consent.",
         "examples": [
-            "DON'T GOUGI ME"
+            "DON'T GOUGI ME!",
+            "I dont like it when you gougi me :(",
+            "The gougi monster is here 😈"
         ],
         "synonyms": [
             "To tickle"
         ],
-        "etymology": ""
+        "etymology": "This word appeared in the summer when the poonies first met. The evil pookie she started tickling the other pookie and he exclaimed 'Don't gougi me!' as a reflex of course. The word stuck and is now a synonym to tickling."
+    },
+    {
+        "id": 1,
+        "word": "Bougne",
+        "pronounciation": "buɲe",
+        "type": "Noise",
+        "definition": "Exclamation to express happiness, excitement, impressedness or satisfaction.",
+        "examples": [
+            "BOUGNE!!!",
+            "*backflips* BOOOUGNE",
+            "*gets up like a ninja* BADABOUGNEEE!!"
+        ],
+        "synonyms": [
+            "Let's goo!",
+            "Boom!"
+        ],
+        "etymology": "Unknown. Apparently the pookie has been saying this forever."
+    },
+    {
+        "id": 3,
+        "word": "Lapoona",
+        "pronounciation": "lɑpuna",
+        "type": "Proper noun",
+        "definition": "Endearing term for your other half, but also, it's her real name now. I do not know what her birth name is... Please someone tell me if you know :)",
+        "examples": [
+            "Hello Lapoona :)",
+            "I love you my lapoona <3"
+        ],
+        "synonyms": [
+            "Lapoonie",
+            "Lapouena",
+            "Lapooneta",
+            "Lapoonenita"
+        ],
+        "etymology": "This word has origins in the latin pookie. Then poonie, then lapoonie, and finally lapoona. Obviously. \nFirst appearance in written text dates back to November 27, 2024."
     }
 ]

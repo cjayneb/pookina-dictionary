@@ -3,16 +3,39 @@ body {
   margin: 0;
   min-height: 100dvh;
   line-height: 1.5;
+  background-color: #ff00e1;
 }
 
 main {
   padding-left: 10px;
+  background-color: #ff00e1;
 }
 
 #root {
   display: flex;
   flex-direction: row;
   min-height: 100dvh;
+  background-color: #ff00e1;
+}
+
+#words ul.listOfWords {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#words h2 {
+  color: #7f00e6;
+}
+
+.word {
+  background-color: #7f00e6;
+  color: #E6E6FA;
+  border-radius: 5px;
+  padding: 5px;
+  scroll-margin-top: 50px;
 }
 
 nav {
@@ -21,7 +44,11 @@ nav {
   flex-shrink: 0;
   min-height: 100dvh;
   background-color: #7f00e6;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+
+  position: sticky;
+  top: 0;
+  height: 100dvh;
   
   width: max-content;
   
@@ -29,6 +56,10 @@ nav {
   padding: 60px 0px 0px 0px;
   
   box-sizing: border-box; 
+
+  font-size: larger;
+  color: #ff00e1;
+  text-decoration: none;
 }
 
 nav.open {
@@ -40,15 +71,23 @@ nav.open {
 nav a {
   width: 100%;
   white-space: nowrap;
+  color: #ff00e1;
 }
 
 nav ul {
   margin-top: 0;
+  list-style-type: none;
 }
 
 .menuIconContainer {
-  display: inline-block;
   cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #ff00e1;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -57,6 +96,8 @@ nav ul {
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
+  background-color: #7f00e6;
+  border-radius: 2px;
 }
 
 /* Rotate first bar */

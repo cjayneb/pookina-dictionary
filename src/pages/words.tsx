@@ -20,15 +20,33 @@ export default function Words() {
   }, [location])
 
   return (
-    <div>
+    <div id="words">
       <h2>Words</h2>
-      <ul>
-        {words.map((word) => (
-          <li key={word.id} id={word.id}>
-            <h3>{word.word}</h3>
-            <h4>{word.pronounciation}</h4>
-            <h4>{word.definition}</h4>
-            <h4>{word.examples}</h4>
+      <ul className="listOfWords">
+        {words.sort((a, b) => a.word.localeCompare(b.word)).map((word) => (
+          <li key={word.id} id={word.id} className="word">
+            <h3>{word.word} (<i>{word.pronounciation}</i>)</h3>
+            <h4><i>{word.type}</i></h4>
+            <h4>Definition</h4>
+            <p>{word.definition}</p>
+            <h4>Etymology</h4>
+            <p>{word.etymology}</p>
+            <h4>Examples</h4>
+            <ul>
+              {word.examples.map((example, i) =>(
+                <li key={word.id + i}>
+                  <i>"{example}"</i>
+                </li>
+              ))}
+            </ul>
+            <h4>Synonyms</h4>
+            <ul>
+              {word.synonyms.map((synomnym, i) =>(
+                <li key={word.id + i}>
+                  <i>"{synomnym}"</i>
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
