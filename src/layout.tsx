@@ -26,7 +26,9 @@ function Scroll(location: Location) {
 export default function Layout() {
   const words: Word[] = wordsData
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [pointerX, setPointerX] = useState(0)
+  const [draggingRight, setDraggingRight] = useState(false)
 
   const location = useLocation()
 
@@ -53,7 +55,20 @@ export default function Layout() {
 
       <main>
         <MenuIcon isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div id="outletContainer" onClick={() => setIsOpen(false)}>
+        <div id="outletContainer" 
+          onClick={() => setIsOpen(false)}
+          draggable="true" 
+          onDrag={(event: DragEvent) => {
+            console.log("X:", event.clientX, "Y:", event.clientY);
+            if (event.clientX > pointerX) {
+              setDraggingRight(true)
+            } else if (event.clientX < pointerX) {
+              setDraggingRight(false)
+            }
+            setIsOpen(draggingRight && event.clientX >= pointerX)
+            setPointerX(event.clientX)
+          }}
+        >
           <Outlet />
         </div>
       </main>

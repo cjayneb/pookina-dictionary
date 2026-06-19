@@ -46,7 +46,8 @@ export default function Home() {
 
   return (
     <>
-      <h1>Welcome to the dictionary of the pookenese people</h1>
+      <h2>Home</h2>
+      <h3>Welcome to the dictionary of the pookenese people</h3>
       <p>
         Looong time ago ({time.years} years, {time.months} months, {time.days} days,{' '}
         {time.hours} hours, {time.minutes} minutes, and {time.seconds} seconds), 
