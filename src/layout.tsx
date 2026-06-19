@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Location, Outlet, useLocation } from 'react-router-dom';
 
 import MenuIcon from './components/menuIcon.js';
 import wordsData from './words.json' with { type: "json" }
 import Word from './models/word.js';
+
+function Scroll(location: Location) {
+  requestAnimationFrame(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1))
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
+    }
+  })
+}
 
 export default function Layout() {
   const words: Word[] = wordsData
@@ -12,34 +26,9 @@ export default function Layout() {
 
   const location = useLocation()
 
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      if (location.hash) {
-        const element = document.getElementById(location.hash.substring(1))
+  useEffect(() => Scroll(location), [location])
 
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
-      } else {
-        document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
-      }
-    });
-  }, [location])
-
-  useEffect(() => {
-    console.log("isOpen changed:", isOpen);
-    requestAnimationFrame(() => {
-      if (location.hash) {
-        const element = document.getElementById(location.hash.substring(1))
-
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
-      } else {
-        document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
-      }
-    });
-  }, [isOpen]);
+  useEffect(() => Scroll(location), [isOpen])
   
   return (
     <>
