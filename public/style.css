@@ -10,6 +10,7 @@ body {
 main {
   padding-left: 10px;
   background-color: #ff00e1;
+  font-size: 2rem;
 }
 
 #root {
@@ -41,6 +42,7 @@ h2 {
   border-radius: 5px;
   padding: 5px;
   scroll-margin-top: 90px;
+  font-size: 2rem;
 }
 
 nav {
@@ -62,7 +64,7 @@ nav {
   
   box-sizing: border-box; 
 
-  font-size: xx-large;
+  font-size: 5rem;
   color: #ff00e1;
   text-decoration: none;
 }
