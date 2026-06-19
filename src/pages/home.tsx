@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
+import MovieClip from '../components/video.js';
 
 const INCEPTION_DATE = new Date('2023-06-19T18:00:00');
 
@@ -70,6 +71,7 @@ export default function Home() {
         {time.hours} hours, {time.minutes} minutes, and {time.seconds} seconds), 
         two little pookenese buddies started frolicking around. blablablablablabla
       </p>
+      <MovieClip />
     </>
   );
 }
