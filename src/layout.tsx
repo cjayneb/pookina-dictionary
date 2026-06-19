@@ -15,6 +15,11 @@ function Scroll(location: Location) {
       }
     } else {
       document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   })
 }
