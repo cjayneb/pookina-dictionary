@@ -41,13 +41,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
-      })
-    }, 500)
+      });
+    });
   }, []);
 
   if (!time) {
