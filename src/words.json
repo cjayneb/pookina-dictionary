@@ -158,9 +158,10 @@
         "definition": "A way to say hello.",
         "examples": [
             "jola poonanita! How's it going?",
-            "Pookie #1 : 'Jola',  Pookie #2 : 'bola'"
+            "Pookie #1 : 'Jola',  Pookie #2 : 'bola'",
+            "Jola morninga"
         ],
-        "synonyms": ["Jolanita", "jojo"],
+        "synonyms": ["Jolanita", "jojo", "bello", "bellone"],
         "etymology": "Came from hola and poonie joonie. I think, idk maybe it's minion word blehhh."
     },
     {
@@ -277,18 +278,6 @@
     },
     {
         "id": 20,
-        "word": "Penar",
-        "pronounciation": "pɛnɑr",
-        "type": "Noun",
-        "definition": "A male sex organ.",
-        "examples": [
-            "I have a penar, you have a vegenar."
-        ],
-        "synonyms": ["Penis", "Peenar"],
-        "etymology": "Penis sounds kinda harsh and violent. However, when penar came to life, it changed everything. It is so much softer. Hein?"
-    },
-    {
-        "id": 21,
         "word": "Pota yoba",
         "pronounciation": "pɒtɑ jəʊbɑ",
         "type": "Noise",
@@ -300,7 +289,7 @@
         "etymology": "Unknown. but pota yoban"
     },
     {
-        "id": 22,
+        "id": 21,
         "word": "Remington",
         "pronounciation": "rɛmɪŋtʌn",
         "type": "Noun",
@@ -314,7 +303,7 @@
         "etymology": "Pookie said this and I thought it was cute. We keep referring to the rem as remington now. First written appearance on October 22, 2024."
     },
     {
-        "id": 23,
+        "id": 22,
         "word": "Taking a lodge yeah?",
         "pronounciation": "ˈteɪkɪŋ ə lɑʤ jæ?",
         "type": "Tik Tok",
@@ -326,7 +315,7 @@
         "etymology": "There's a popular video online of arab dudes in a car being impressed by the seats and yelling 'Technologia!'. This whole time I thought they were british dudes saying 'Taking a lodge yeah?', like 'are you taking the piss?'"
     },
     {
-        "id": 24,
+        "id": 23,
         "word": "Ti",
         "pronounciation": "ti",
         "type": "Personal pronoun",
@@ -339,9 +328,9 @@
         "etymology": "Unknown. Minion probably."
     },
     {
-        "id": 25,
+        "id": 24,
         "word": "Cro",
-        "pronounciation": "ti",
+        "pronounciation": "kroʊ",
         "type": "Noun",
         "definition": "A way to refer to pookie.",
         "examples": [

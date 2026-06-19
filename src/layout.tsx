@@ -23,6 +23,8 @@ function Scroll(location: Location) {
   })
 }
 
+
+
 export default function Layout() {
   const words: Word[] = wordsData
 
@@ -84,7 +86,7 @@ export default function Layout() {
             const touchEndX = e.changedTouches[0].clientX;
             const deltaX = touchEndX - touchStartX;
 
-            const SWIPE_THRESHOLD = 75;
+            const SWIPE_THRESHOLD = 125;
 
             if (deltaX > SWIPE_THRESHOLD) {
               setIsOpen(true);
