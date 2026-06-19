@@ -98,7 +98,6 @@ nav li {
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
   background-color: #ff00e1;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -125,4 +124,38 @@ nav li {
 /* Rotate last bar */
 .change .bar3 {
   transform: translate(0, -22px) rotate(45deg);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #ff00e1;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7f00e6;
+}
+
+.pageTitle {
+  opacity: 0;
+  transform: translateX(-8px);
+
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+
+  pointer-events: none;
+}
+
+.pageTitle.visible {
+  opacity: 1;
+  transform: translateX(0);
 }

@@ -41,12 +41,12 @@ export default function Home() {
   }, []);
 
   if (!time) {
-    return <h2>Loading history...</h2>;
+    return <h2 id="page-title">Home</h2>;
   }
 
   return (
     <>
-      <h2>Home</h2>
+      <h2 id="page-title">Home</h2>
       <h3>Welcome to the dictionary of the pookenese people</h3>
       <p>
         Looong time ago ({time.years} years, {time.months} months, {time.days} days,{' '}

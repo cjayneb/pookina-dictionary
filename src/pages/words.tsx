@@ -8,7 +8,7 @@ export default function Words() {
 
   return (
     <div id="words">
-      <h2>Words</h2>
+      <h2 id="page-title">Words</h2>
       <ul className="listOfWords">
         {words.sort((a, b) => a.word.localeCompare(b.word)).map((word) => (
           <li key={word.id} id={word.id} className="word">
