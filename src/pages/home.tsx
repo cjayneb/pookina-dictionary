@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import confetti from 'canvas-confetti';
 
-const INCEPTION_DATE = new Date('2023-06-19T18:00:00');
+const INCEPTION_DATE = new Date('2023-06-19T11:54:00');
 
 interface TimeBreakdown {
   years: number; months: number; days: number;
@@ -31,6 +32,10 @@ function getTimeDifference(startDate: Date): TimeBreakdown {
 
 export default function Home() {
   const [time, setTime] = useState<TimeBreakdown | null>(null);
+  const [previousYears, setPreviousYears] = useState<number | null>(null);
+
+  var scalar = 10
+  var pineapple = confetti.shapeFromText({ text: '🍌', scalar });
 
   useEffect(() => {
     setTime(getTimeDifference(INCEPTION_DATE));
@@ -39,6 +44,18 @@ export default function Home() {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (previousYears !== null && time?.years > previousYears) {
+      confetti({
+        shapes: [pineapple], scalar
+      });
+    }
+
+    if (time) {
+      setPreviousYears(time.years);
+    }
+  }, [time?.years]);
 
   if (!time) {
     return <h2 id="page-title">Home</h2>;

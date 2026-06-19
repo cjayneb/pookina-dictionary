@@ -7,7 +7,7 @@ import Word from './models/word.js';
 
 const SWIPE_THRESHOLD = 125;
 
-function Scroll(location: Location, isOpen : boolean) {
+function Scroll(location: Location) {
   requestAnimationFrame(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1))
@@ -16,7 +16,6 @@ function Scroll(location: Location, isOpen : boolean) {
         element.scrollIntoView()
       }
     } else {
-      if (!isOpen) return
       window.scrollTo({
         top: 0,
         left: 0,
