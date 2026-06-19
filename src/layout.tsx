@@ -28,6 +28,7 @@ export default function Layout() {
 
   const [isOpen, setIsOpen] = useState(false)
   const [startX, setStartX] = useState<number | null>(null);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
 
   const location = useLocation()
 
@@ -72,6 +73,26 @@ export default function Layout() {
             }
 
             setStartX(null);
+          }}
+
+          onTouchStart={(e) => {
+            setTouchStartX(e.touches[0].clientX);
+          }}
+          onTouchEnd={(e) => {
+            if (touchStartX === null) return;
+
+            const touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchEndX - touchStartX;
+
+            const SWIPE_THRESHOLD = 75;
+
+            if (deltaX > SWIPE_THRESHOLD) {
+              setIsOpen(true);
+            } else if (deltaX < -SWIPE_THRESHOLD) {
+              setIsOpen(false);
+            }
+
+            setTouchStartX(null);
           }}
         >
           <Outlet />
