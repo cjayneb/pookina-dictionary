@@ -30,6 +30,10 @@ main {
   color: #7f00e6;
 }
 
+#outletContainer {
+  min-height: 100dvh;
+}
+
 .word {
   background-color: #7f00e6;
   color: #E6E6FA;

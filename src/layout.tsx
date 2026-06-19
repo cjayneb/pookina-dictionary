@@ -20,7 +20,7 @@ export default function Layout() {
           <summary><Link to="/words">Words</Link></summary>
           <ul>
             {words.sort((a, b) => a.word.localeCompare(b.word)).map((word) => (
-              <li><Link to={"/words#"+word.id}>{word.word}</Link></li>
+              <li key={word.id}><Link to={"/words#"+word.id}>{word.word}</Link></li>
             ))}
           </ul>
         </details>
@@ -29,7 +29,9 @@ export default function Layout() {
 
       <main>
         <MenuIcon isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Outlet />
+        <div id="outletContainer" onClick={() => setIsOpen(false)}>
+          <Outlet />
+        </div>
       </main>
     </>
   );

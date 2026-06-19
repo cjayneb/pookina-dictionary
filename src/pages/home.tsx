@@ -40,6 +40,16 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    });
+  }, []);
+
   if (!time) {
     return <h2>Loading history...</h2>;
   }
