@@ -14,7 +14,6 @@ function Scroll(location: Location) {
         element.scrollIntoView({ behavior: 'smooth' })
       }
     } else {
-      document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
       window.scrollTo({
         top: 0,
         left: 0,
