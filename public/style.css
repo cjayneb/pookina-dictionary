@@ -1,7 +1,7 @@
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
-  min-height: 100dvh;
+  min-height: 100%;
   line-height: 1.5;
   background-color: #ff00e1;
 }
@@ -14,7 +14,7 @@ main {
 #root {
   display: flex;
   flex-direction: row;
-  min-height: 100dvh;
+  min-height: 100%;
   background-color: #ff00e1;
 }
 
@@ -31,7 +31,7 @@ main {
 }
 
 #outletContainer {
-  min-height: 100dvh;
+  min-height: 100%;
 }
 
 .word {
@@ -46,13 +46,12 @@ nav {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  min-height: 100dvh;
+  min-height: 100%;
   background-color: #7f00e6;
   overflow-x: hidden;
 
   position: sticky;
   top: 0;
-  height: 100dvh;
   
   width: max-content;
   

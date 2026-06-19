@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import MenuIcon from './components/menuIcon.js';
 import wordsData from './words.json' with { type: "json" }
@@ -10,11 +10,36 @@ export default function Layout() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const location = useLocation()
+
   useEffect(() => {
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-  }, []);
+    requestAnimationFrame(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1))
+
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      } else {
+        document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
+      }
+    });
+  }, [location])
+
+  useEffect(() => {
+    console.log("isOpen changed:", isOpen);
+    requestAnimationFrame(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1))
+
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      } else {
+        document.getElementsByTagName('main')[0].scrollIntoView({behavior: 'smooth'})
+      }
+    });
+  }, [isOpen]);
   
   return (
     <>
