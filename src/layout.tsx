@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 import MenuIcon from './components/menuIcon.js';
@@ -9,6 +9,12 @@ export default function Layout() {
   const words: Word[] = wordsData
 
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
   
   return (
     <>
@@ -36,3 +42,4 @@ export default function Layout() {
     </>
   );
 }
+
