@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 
-const INCEPTION_DATE = new Date('2023-06-19T11:54:00');
+const INCEPTION_DATE = new Date('2023-06-19T18:00:00');
 
 interface TimeBreakdown {
   years: number; months: number; days: number;
